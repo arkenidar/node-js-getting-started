@@ -18,9 +18,10 @@ app.listen(app.get('port'), function() {
 });
 
 var pg = require('pg');
-
+var config = require('./config.json');
+var DATABASE_URL = process.env.DATABASE_URL || config.DATABASE_URL;
 app.get('/db', function (request, response) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+  pg.connect(DATABASE_URL, function(err, client, done) {
     client.query('SELECT * FROM test_table', function(err, result) {
       done();
       if (err)
