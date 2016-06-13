@@ -16,12 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/arkenidar/node-js-getting-started"
   },
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "postgres"
   ],
   "license": "MIT"
 }
